@@ -139,7 +139,25 @@ body {
     height: 100%;
     opacity: 0;
     transition: opacity 1s ease 1s;
-    overflow-y: auto; /* вертикальная прокрутка */
-    overflow-x: hidden; /* горизонтальная прокрутка скрыта */
+    overflow-y: auto;       /* вертикальная прокрутка */
+    overflow-x: hidden;     /* горизонтальная прокрутка отключена */
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* плавная прокрутка на iPhone */
 }
+
+@media (max-width: 480px) {
+    .letter {
+        padding: 10px;
+        font-size: 14px;   /* текст меньше */
+        height: 150px;     /* фиксированная высота конверта */
+    }
+    
+    h1 {
+        font-size: 22px;   /* заголовок меньше */
+    }
+
+    #yesBtn {
+        font-size: 16px;   /* кнопка меньше */
+    }
+}
+
