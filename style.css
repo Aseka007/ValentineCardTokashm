@@ -1,0 +1,129 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+.title {
+    font-size: 24px;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.valentine-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.description {
+    font-size: 16px;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Конверт */
+#envelope {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.envelope-front {
+    font-size: 24px;
+    color: #ff6b81;
+}
+
+.note {
+    margin-top: 15px;
+    color: #e91e63;
+    font-size: 18px;
+}
+
+/* Скрытый элемент */
+.hidden {
+    display: none;
+}
+
+/* Сердечки */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    user-select: none;
+    pointer-events: none;
+    animation: rain linear forwards;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+    .valentine-photo {
+        width: 150px;
+        height: 150px;
+    }
+    .title {
+        font-size: 20px;
+    }
+}
+
+.girl-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff4b6e;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(255, 75, 110, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.girl-photo:hover {
+    transform: scale(1.05);
+}
